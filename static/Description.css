@@ -1,0 +1,62 @@
+body{
+    font-family:"Oswald",sans-serif;
+    margin:0;
+    padding:0;
+    background-color:#f9f9f9;
+    color:#333;
+  }
+header{
+    background-color:orange;
+    color:#fff;
+    padding:1rem 2rem;
+    text-align:center;
+}
+.description-section{
+    max-width:1500px;
+    margin:2rem auto;
+    padding:2rem;
+    background:#ffffff;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    border-radius:10px;
+}
+.description-section h1{
+    text-align:center;
+    color:orange;
+    margin-bottom:1rem;
+}
+.items{
+    display:flex;
+    flex-direction:column;
+    align-items:center;   
+}
+.item{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  border:solid 2px orange;
+}
+.item p{
+  font-size:15px;
+  line-height:1.5rem;
+  margin-right:8px;
+}
+img{
+  display: flex;
+  flex-direction:column;
+  width:200px;
+}
+span{
+  margin:auto;
+  border:3px orange solid;
+}
+.item p strong{
+    color:orange;
+}
+footer{
+    background-color:orange;
+    color:#fff;
+    text-align:center;
+    padding:1rem;
+    margin-top:3rem;
+    font-size:18px;
+}
+  

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login | MediTech Academy</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <link rel="icon" href="https://www.shutterstock.com/image-illustration/orange-book-stand-vertical-icon-260nw-1168629757.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+        <!-- داخل قالب HTML (مثل forgot_password.html) -->
+        <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="div1">
+                <h1>MediTech Academy</h1>
+                <form action="" method="post"  id="loginform" class="fade-in">    
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required class="icon-email">
+                    <label for="password">Password :</label>
+                    <input type="password" id="password" name="password" placeholder="password" required class="icon-password">
+                    <p class="p1">
+                       <a href="{{ url_for('forgot_password') }}" class="a1">Forgot Password?</a>
+                    </p>                     
+                    <button type="submit" id="btn">LOGIN</button>
+                    <p class="error">all fields are required</p>
+                </form>
+                <p class="create-accaount">Don't have an account ? <a href="{{ url_for('create_account') }}">Create now</a></p>
+            </div>        
+        </div>
+    </body>
+</html>

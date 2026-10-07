@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | MediTech Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Ae2O7E8VuytWZqGYB1ntODZxyJBtVOFTRg&s">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-title">
+            <span class="title">MediTech Academy</span>
+        </div>
+        <div class="nav-search">
+            <input type="text" placeholder="Search here..." class="search-bar">
+        </div>
+        <div class="nav-log">
+            <a href="{{ url_for('logout') }}" class="log-button">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="div-logo">
+            <a href="#">
+                <img src="https://i.ibb.co/5fMbbVN/Screenshot-312.png" alt="Logo" class="logo" width="100%">
+            </a>
+        </div>
+        <ul>
+            <li><a href="{{ url_for('videos') }}">Videos</a></li>
+            <li><a href="{{ url_for('description') }}">Description</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </aside>
+
+    <!-- Subscription Section -->
+    <section style="background-color: #f9f9f9; padding: 40px 20px; text-align: center;">
+        <h2 style="font-size: 2em; margin-bottom: 20px;">Choose Your Subscription Plan</h2>
+        <div class="subscription-container">
+            <!-- Free Plan -->
+            <div class="subscription-box free-plan">
+                <h3>Free Plan</h3>
+                <p>$0 / month</p>
+                <ul>
+                    <li>✔️ Limited lesson access</li>
+                    <li>✔️ Basic content only</li>
+                    <li>✘ No certificates</li>
+                    <li>✘ No live support</li>
+                </ul>
+            </div>
+
+            <!-- Monthly Plan -->
+            <div class="subscription-box monthly-plan">
+                <h3>Monthly Plan</h3>
+                <p>$9.99 / month</p>
+                <ul>
+                    <li>✔️ All lessons and videos</li>
+                    <li>✔️ Certificate downloads</li>
+                    <li>✔️ Live support</li>
+                    <li>✔️ Regular updates</li>
+                </ul>
+                <button type="submit">Monthly Subscription</button>
+            </div>
+
+            <!-- Yearly Plan -->
+            <div class="subscription-box yearly-plan">
+                <h3>Yearly Plan</h3>
+                <p>$99.99 / year</p>
+                <ul>
+                    <li>✔️ All monthly plan benefits</li>
+                    <li>✔️ 20% discount</li>
+                    <li>✔️ Bonus: Consultation session</li>
+                </ul>
+                <button type="submit">Monthly Subscription</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <!-- Video Section -->
+<section class="video-section">
+    <h2>Training Videos</h2>
+    <div class="video-container">
+        <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/HovB7kRDznY?si=10lSxfdcCqoeist-" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; 
+        autoplay; 
+        clipboard-write; 
+        encrypted-media; 
+        gyroscope; 
+        picture-in-picture; 
+        web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+    </div>
+</section>
+
+    <!-- Description Section -->
+    <section class="description-section">
+        <h2>Course Description</h2>
+        <p>
+            Here you can provide a detailed description of the educational content we offer, including video guides and how users can benefit from them.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 MediTech Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

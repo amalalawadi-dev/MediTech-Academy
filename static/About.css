@@ -1,0 +1,61 @@
+body{
+  font-family:"Oswald",sans-serif;
+  margin:0;
+  padding:0;
+  background-color:#f9f9f9;
+  color:#333;
+}
+header{
+  background-color:orange;
+  color:#fff;
+  padding:1rem 2rem;
+  text-align:center;
+}
+.about-section{
+  max-width:1200px;
+  margin:2rem auto;
+  padding:2rem;
+  background:#ffffff;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  border-radius:10px;
+}
+.about-section h1{
+  text-align:center;
+  color:orange;
+  margin-bottom:1rem;
+}
+.about-section p{
+  line-height:1.7;
+  font-size:1.1rem;
+  margin-bottom:1.5rem;
+}
+.features{
+  margin-top:2rem;
+}
+.features h2{
+  color:orange;
+  margin-bottom:1rem;
+}
+.feature-list{
+  list-style:none;
+  padding:0;
+}
+.feature-list li{
+  margin-bottom:0.8rem;
+  padding-left:1.5rem;
+  position:relative;
+}
+.feature-list li::before{
+  content:'✔';
+  color:orange;
+  position:absolute;
+  left:0;
+  top:0;
+}
+footer{
+  background-color:orange;
+  color:#fff;
+  text-align:center;
+  padding:1rem;
+  margin-top:3rem;
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videos | MediTech Academy</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='Videos.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="page-header">
+      <h1>Educational Videos Library</h1>
+      <p>Learn about medical equipment through educational videos.</p>
+    </header>
+    <main class="videos-container">
+      <!-- Free Video Section -->
+      <section class="free-section">
+        <div class="section-title">
+          <h2>Free Video</h2>
+          <p>Watch our free educational video.</p>
+        </div>
+        <div class="free-video-card">
+          <div class="video-wrapper">
+            <iframe
+              src="{{ free_video.embed_url }}"
+              title="{{ free_video.title }}"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+          <div class="video-info">
+            <span class="free-badge"> FREE </span>
+            <h3>{{ free_video.title }}</h3>
+            <p>
+              Learn more about ventilators and their use in medical
+              environments.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Locked Videos Section -->
+      <section class="library-section">
+        <div class="section-title">
+          <h2>Medical Equipment Videos</h2>
+          {% if subscribed %}
+          <p>You are subscribed. Enjoy all educational videos.</p>
+          {% else %}
+          <p>Subscribe to unlock all educational videos.</p>
+          {% endif %}
+        </div>
+        <div class="video-grid">
+          {% for video in locked_videos %}
+          <div class="video-card {% if not subscribed %}locked{% endif %}">
+            {% if subscribed %}
+            <div class="video-wrapper">
+              <iframe
+                src="{{ video.embed_url }}"
+                title="{{ video.title }}"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            {% else %}
+            <div class="locked-video">
+              <div class="lock-icon">🔒</div>
+              <h3>Locked Video</h3>
+              <p>Subscribe to watch this video.</p>
+            </div>
+            {% endif %}
+            <div class="video-card-content">
+              <h3>{{ video.title }}</h3>
+              {% if subscribed %}
+              <span class="available"> Available </span>
+              {% else %}
+              <span class="premium"> Premium </span>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
